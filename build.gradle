@@ -25,3 +25,11 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+dependencies {
+    compile 'com.android.support:cardview-v7:27.0.2'
+
+
+    compile 'com.android.support:recyclerview-v7:21.0.+'
+}
+
+
