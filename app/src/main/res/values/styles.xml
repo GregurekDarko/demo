@@ -2,5 +2,10 @@
     <!-- your theme inherits from the material theme -->
     <style name="AppTheme" parent="android:Theme.Material">
         <!-- theme customizations -->
+        <color name="primary">#32b846</color>
+        <color name="primaryLightColor">#6eeb75</color>
+        <color name="primaryDarkColor">#008715</color>
+        <color name="primaryTextColor">#000000</color>
+
     </style>
 </resources>
