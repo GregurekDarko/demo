@@ -1,8 +1,8 @@
 <resources>
     <!-- your theme inherits from the material theme -->
-    <style name="AppTheme" parent="android:Theme.Material">
+    <style name="AppTheme" parent="android:Theme.Material.Light">
         <!-- theme customizations -->
-        <color name="primary">#32b846</color>
+        <color name="">#32b846</color>
         <color name="primaryLightColor">#6eeb75</color>
         <color name="primaryDarkColor">#008715</color>
         <color name="primaryTextColor">#000000</color>
