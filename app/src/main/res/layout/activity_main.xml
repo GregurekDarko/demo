@@ -4,7 +4,67 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/secondaryColor"
     tools:context=".MainActivity">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/margin"
+    android:background="@drawable/radius_element"
+    android:layout_marginTop="5dp">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/competition_name"
+        android:layout_centerHorizontal="true"
+        android:textSize="16sp"
+        android:textColor="#646464"
+        android:layout_marginTop="10dp"
+        android:id="@+id/competition_name"
+        android:padding="5dp"
+        />
+
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          android:background="#646464"
+          android:layout_below="@id/competition_name"
+          android:layout_marginTop="5dp"
+          android:layout_centerHorizontal="true"
+          android:id="@+id/border"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/border"
+        android:background="@drawable/radius_element"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Portugal"
+           android:textColor="@color/secondaryTextColor"
+           android:textAllCaps="true"
+           android:textStyle="bold"
+           android:drawableBottom="@drawable/pt"
+           android:gravity="center_horizontal"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="France"
+            android:textColor="@color/secondaryTextColor"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:drawableBottom="@drawable/fr"
+            android:gravity="center_horizontal"/>
+
+
+    </LinearLayout>
 
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
@@ -12,10 +72,8 @@
         android:layout_margin="15dp">
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-         />
+
     </android.support.v7.widget.CardView>
+
+</RelativeLayout>
 </ScrollView>
