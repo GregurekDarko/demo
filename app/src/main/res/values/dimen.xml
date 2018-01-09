@@ -18,7 +18,9 @@ limitations under the License.
 <resources>
     <dimen name="action_button_min_width">56dp</dimen>
     <dimen name="indeterminate_progress_size">32dp</dimen>
-    <dimen name="heading_size">20sp</dimen>
+    <dimen name="heading_size">22sp</dimen>
     <dimen name="margin">5dp</dimen>
+
+    <dimen name="flags_width">35dp</dimen>
 
 </resources>

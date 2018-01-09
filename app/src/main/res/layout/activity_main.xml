@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 <RelativeLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:layout_margin="@dimen/margin"
     android:background="@drawable/radius_element"
     android:layout_marginTop="5dp">
@@ -19,61 +19,198 @@
         android:layout_height="wrap_content"
         android:text="@string/competition_name"
         android:layout_centerHorizontal="true"
-        android:textSize="16sp"
+        android:textSize="18sp"
         android:textColor="#646464"
         android:layout_marginTop="10dp"
         android:id="@+id/competition_name"
         android:padding="5dp"
         />
 
-      <View
-          android:layout_width="match_parent"
-          android:layout_height="0dp"
-          android:background="#646464"
-          android:layout_below="@id/competition_name"
-          android:layout_marginTop="5dp"
-          android:layout_centerHorizontal="true"
-          android:id="@+id/border"/>
+
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/border"
+        android:layout_below="@id/competition_name"
         android:background="@drawable/radius_element"
         android:orientation="horizontal"
-        android:layout_marginTop="10dp">
+        android:layout_marginTop="10dp"
+        android:id="@+id/teams">
 
        <TextView
-           android:layout_width="wrap_content"
+
            android:layout_height="wrap_content"
            android:text="Portugal"
            android:textColor="@color/secondaryTextColor"
            android:textAllCaps="true"
            android:textStyle="bold"
-           android:drawableBottom="@drawable/pt"
-           android:gravity="center_horizontal"/>
+           android:drawableBottom="@drawable/flag_portugal"
+           android:gravity="center_horizontal"
+           android:layout_width="0dp"
+           android:layout_weight="1"
+           android:textSize="14sp"
+
+
+
+
+           />
+
+        
+
+
+
         <TextView
-            android:layout_width="wrap_content"
+
             android:layout_height="wrap_content"
             android:text="France"
             android:textColor="@color/secondaryTextColor"
             android:textAllCaps="true"
             android:textStyle="bold"
-            android:drawableBottom="@drawable/fr"
-            android:gravity="center_horizontal"/>
+            android:drawableBottom="@drawable/flag_france"
+            android:gravity="center_horizontal"
+            android:layout_width="0dp"
+            android:layout_weight="1"/>
 
 
     </LinearLayout>
 
-    <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="15dp">
+        android:text="Score"
+        android:id="@+id/score_text"
+        android:layout_below="@id/teams"
+        android:layout_centerHorizontal="true"
+        android:textAllCaps="true"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+       />
+
+    <Button
+        android:id="@+id/left_button_goal"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_alignStart="@+id/fauls_add_one"
+        android:layout_alignTop="@+id/right_button_goal"
+        android:background="@drawable/buttons_add_one"
+
+
+        android:text="+"
+        android:textSize="16sp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:layout_alignBaseline="@id/left_button_goal"
+        android:layout_toRightOf="@id/left_button_goal"
+        android:layout_marginLeft="10dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        />
+
+    <Button
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:background="@drawable/buttons_add_one"
+        android:text="+"
+        android:textSize="16sp"
+        android:layout_below="@id/score_text"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="10dp"
+        android:id="@+id/right_button_goal"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:layout_alignBaseline="@id/left_button_goal"
+        android:layout_toLeftOf="@id/right_button_goal"
+        android:layout_marginRight="10dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:id="@+id/textView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fauls"
+        android:id="@+id/fauls_text"
+        android:layout_below="@id/left_button_goal"
+        android:layout_centerHorizontal="true"
+        android:textAllCaps="true"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        />
+
+    <Button
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:background="@drawable/buttons_add_one"
+        android:text="+"
+        android:textSize="16sp"
+        android:id="@+id/fauls_add_one"
+        android:layout_below="@id/fauls_text"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="10dp"
+
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:layout_alignBaseline="@id/fauls_add_one"
+        android:layout_toRightOf="@id/fauls_add_one"
+        android:layout_marginLeft="10dp"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
+
+    <Button
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:background="@drawable/buttons_add_one"
+        android:text="+"
+        android:textSize="16sp"
+        android:id="@+id/fauls_add_one_france"
+        android:layout_below="@id/fauls_text"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/fauls_add_one_france"
+        android:layout_alignBottom="@+id/fauls_add_one_france"
+        android:layout_alignStart="@+id/textView"
+        android:text="0"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/fauls_add_one_france"
+        android:background="@color/secondaryTextColor"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/border_bottom"
+        />
+
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_centerHorizontal="true"
+    android:layout_below="@id/border_bottom"
+    android:text="Reset"
+    android:background="@drawable/reset_button"/>
 
 
 
-    </android.support.v7.widget.CardView>
+
 
 </RelativeLayout>
+
 </ScrollView>

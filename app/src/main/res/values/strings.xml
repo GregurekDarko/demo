@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">Score Keeper App</string>
-    <string name="competition_name"><b><i>UEFA European Championship Finals</i></b></string>
+    <string name="competition_name"><b>UEFA European Championship Finals</b></string>
 </resources>
